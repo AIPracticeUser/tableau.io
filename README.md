@@ -1,4 +1,4 @@
-# tableau.io
+# tableau (Datacamp)
 
 Tableau is a widely used business intelligence (BI) and analytics software trusted by companies like Amazon, Experian, and Unilever to explore, visualize, and securely share data in the form of Workbooks and Dashboards. With its user-friendly drag-and-drop functionality it can be used by everyone to quickly clean, analyze, and visualize your team’s data. We’ll learn how to navigate Tableau’s interface and connect and present data using easy-to-understand visualizations. By the end of this training, we’ll have the skills we need to confidently explore Tableau and build impactful data dashboards. Let’s dive in.
 
@@ -149,8 +149,165 @@ Notice that often our data includes nulls. This is misleading because it makes i
   Repeat the above instruction with the Broadband Subscribers per 100 ppl field :
   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/7fe89f2a-0bfa-45ef-aa1f-73c40a164bc0)
 
-  Question: Which country has null values for both Cell phones per 100 people and 'Broadband Subcribers per 100 ppl' in 2010?
+  Question: Which country has null values for both 'Cell phones per 100 people' and 'Broadband Subcribers per 100 ppl' in 2010?
   Marshall Islands
+
+  Filtering for null values is a useful feature when cleaning and exploring our data, by identifying missing data for follow up.
+
+  2.3.2 Top filters on Tableau
+  Now we want to filter countries on their average Cell Phones per 100 People across years 2006-2015. The sum aggregation is set as the default for measures so we’ll have to look out for this.
+
+   Navigate to the Top Filters worksheet :
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/375aadb8-9038-4867-b394-abde69663013)
+
+   Add a filter on Country. Use Tableau’s top filter option on the bottom two countries based on the Cell Phones per 100 People average:
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/a5a50655-d4f9-4975-9ed7-ad5764d9eacb)
+
+   Question: Which country has the second lowest average Cell Phones per 100 People ?
+   Cuba.
+
+2.4 Aggregation
+![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/43d9a040-76c5-4e2f-a158-04b69b7d5239)
+
+   2.4.1 Aggregating measures and dimensions
+   Aggregating can be defined as gathering and summarizing data points for analytics. Aggregating measures is more common, but also some dimensions can be aggregated, depending on your use case.
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/211a6e5d-42b3-4618-9a13-1e5ce27c3868)
+
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/4b00c47f-c93c-4beb-9055-579171be82e6)
+
+2.5 Scatter plots and aggregations
+   2.5.1 CO2 Emmisions and GDP in Sub Regions
+In this exercise we will create a scatter plot comparing GDP per Capita and CO2 Emissions per Person. The data points in the scatter plot should represent Sub Regions.
+
+   Open the workbook 2_5_co2emissions_and_gdp_in_sub_regions.twbx and ensure you are in the CO2 and GDP worksheet :
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/6bb4d5e1-c709-426c-8cca-d55ef9f5c3b6)
+
+   Create a scatter plot with average GDP per Capita on the x-axis and the average CO2 Emissions per Person on the y-axis :
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/ef9b094d-36c1-4243-8cce-7c53ddc1db1c)
+
+   Colour the points based on Sub Regions :
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/2e10cc14-b50d-482b-a669-82bcf3fa8d78)
+
+   Question: Based on our scatter plot the values for Eastern Asia and Caribbean sub regions are very different. True or False ?
+   False, the values are very similar, the data points overlap on the scatterplot.
+
+   2.5.2 Counting on GDP per capita
+   The aggregation options Count and Count (Distinct) are useful for analyzing dimensions and whether they have reached certain dimensions.
+
+   Open the workbook 2_6_counting_on_gdp_per_capita.twbx and navigate to the GDP per Capita :
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/c9bde446-be64-4a3a-96db-e53914ad1b9b)
+
+   Create a chart with GDP per Capita (Grouped) as rows and the distinct count of GDP per Capita (Grouped) as columns :
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/6a0f5e18-f2ec-4c6b-abda-fe251de2eb29)
+
+   Colour the bars based on Sub Region :
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/12fbf29b-808a-4cf8-a452-5479a8eac7bc)
+
+   Question: Which sub-region has been in all six GDP per Capita (Grouped) categories ?
+   Western Asia
+
+   2.5.3 Standard deviation of life expectancy
+   Standard deviation is a useful aggregation for analyzing how much data varies. In this exercise we will use standard deviation to see how much life expectancy has varied across the years for different countries.
+
+   Load the workbook 2_7_std_dev_of_life_expectancy.twbx and navigate to the Life Expectancy worksheet :
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/d49af048-cf1f-482c-bc33-fea8900b0ce7)
+
+   Create a bar chart with the bars representing each country’s standard deviation of life expectancy :
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/a917d964-c097-463c-8e4f-cd2252ddd889)
+
+   Consider only the years from 1980 to 2000 :
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/7aa70395-59f7-49bd-b03a-8d260029c2ac)
+
+   Question: Which country has the highest standard deviation on the Life Expectancy measure? 
+   Lebanon
+
+   Lebanon has the highest standard deviation between the years 1980 to 2000. We would have to analyze further if this relatively large variation was due to increased or decreased quality of life.
+
+   2.6 Calculated fields
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/33037a1a-b538-413d-8ec8-c2ff8dd74ead)
+
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/a350d73a-a4c1-41d4-b416-02795dc537b8)
+
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/3829268b-7d08-4619-8165-c7754333c5c7)
+
+   There’s no need to memorize all of the functions because of Tableau’s handy built-in documentation :
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/784e4adf-e78e-4a61-b3de-ffaafe8eb29d)
+
+   2.7 Creating calculated fields
+      2.7.1 Calculated field for rounding
+      Open the workbook 2_8_calculated_field_for_rounding.twbx and navigate to the Rounding worksheet :
+      ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/910353e6-b312-4dd2-b59a-d90de693be91)
+
+      Create a new calculated field called Rounded Women 25-34 - use the built-in documentation and look up ROUND() and round the new column to whole numbers (0 decimal points) :
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/4d04af37-c1ec-4006-9b88-136ea9aca43a)
+
+      Replace Women 25-34 in the Marks field with our newly created field :
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/ae0c80e8-b438-42be-b1cc-c38ab97dbf91)
+
+      Remove any existing filters and create new filters for Year = 1976 and >=10 for our newly created field :
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/bebb5cef-f988-4f9e-b302-68d31e9dc061)
+
+      Question: How many countries in 1976 had women in the 25-34 age range spending, on average, ten years or more in school ?
+      4
+
+   2.7.2 Ratio between genders
+   Another useful calculated field to make is a ratio. Ratios are ana excellent way to compare two values. In our case, we can compare the mean years of education between men and women using a ratio. The closer the ratio is to one, the more equal levels of education are between women and men.
+
+   Load the workbook 2_9_ratio_between_genders.twbx and navigate to the Ratio worksheet :
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/cb3a7f8b-186e-4837-9705-9e4ad202013e)
+
+   Create a calculated field called Men:Women (25-34) which calculates the men:women ratio for years spent in school in the 25-34 age group. Add this new field as a column to the table by dragging it to the Text card and change the aggregation from sum to average :
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/ccc9eaa0-0523-4f9d-952a-9004f7dd7719)
+
+   Question: What is Russia's Men:Women (25-34) ration for years spent in school? 
+   0.9821
+
+   Russia has a ratio of ~ 0.98 which means that Russian men have an average of 0.98 years of schooling for every year of schooling that Russian women receive.
+
+   Let’s now create a field for the average across women and women in the age group 25-34.
+
+   Navigate to the Average worksheet:
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/01440934-c68c-4e13-b2bd-837d8d56df25)
+
+   Create a new field called 25-34 that sums the values for men and women in the 25-34 age group and divides them by 2 to get the average:
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/72594304-0ebf-45b8-8348-886645b6e34a)
+
+   Add the new field to the table. Make sure to change the aggregation from SUM to AVG :
+   ![image](https://github.com/AIPracticeUser/tableau.io/assets/100339175/c10744ec-a11e-4a5d-865d-167db490909e)
+
+   Question: What is the highest 25-34 average for a country?
+   13.40
+
+   Remember, this isn’t a weighted average. To make this calculation more accurate, we could add the country’s population data for each gender and age group. Then we could alter the calculated field’s formula to have weighted proportions.
+
+   
+
+      
+
+   
+
+
+
+
+
+   
+
+
+   
+
+
+
+   
+
+
+
+
+
+
+   
+
+
+
 
   
 
